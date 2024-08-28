@@ -22,9 +22,9 @@ It follows the MVC (Model-View-Controller) pattern and provides basic functional
 
 Clone the repository or download the project files to your local machine.
 
-### 2. Create and Populate the Database
-Create a Database
+The main folder should be placed in xampp/htdocs
 
+### 2. Create and Populate the Database
 Create a new database in MySQL. It should be preferably named task_management.
 ```sql
 CREATE DATABASE task_management;
