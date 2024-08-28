@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="www/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>
+            Welcome
+        </h2>
+        
+        <form action="Controllers/TasksController.php" method="get">
+        
+            <abbr class="from_elements" id="user_abbr" title="Leave blank to list all of the users">
+                <input class="form_elements" id="user" name="user" placeholder="User" />
+            </abbr>
+            <select class="form_elements" id="status" name="status">
+                <option value="0">Status</option>
+                <option value="1">Planned</option>
+                <option value="2">In progress</option>
+                <option value="3">Complete</option>
+                <option value="4">Cancelled</option>
+            </select>
+            <button id="submit" type="submit">Submit</button>
+            <input name="action" value="index" style="display: none;">
+        </form>
+            
+        <script> 
+            document.querySelector("#user").addEventListener("input", () => {
+                if (document.querySelector("#user").value != 0) {
+                    document.querySelector("form").setAttribute("action", "Controllers/UsersController.php");
+                }
+                else {
+                    document.querySelector("form").setAttribute("action", "Controllers/TasksController.php");
+                }
+            }); 
+        </script>
+    </main>
+    <a href="./population.php">Populate data</a>
+</body>
+</html>

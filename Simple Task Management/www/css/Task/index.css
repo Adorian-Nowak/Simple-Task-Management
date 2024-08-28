@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 5vh auto;
+}
+
+th > span {
+    display: flex;
+    justify-content: space-between;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 0.5rem;
+    width: 10rem;
+}
